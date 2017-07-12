@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- Links:
+
+    https://bl.ocks.org/mbostock/4282586
+    https://en.wikipedia.org/wiki/Euler_angles
+    
+    
+    This example shows satellite projection in D3.js based 
+    on the Euler angles.
+    
+    -->
+
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<script src="projection.js"></script>
+
+
+<div id="wrapper">
+    <div id="div1">
+    <p style="text-align:center"> D3.js Satellite Projection Example</p>
+    <label for="l" 
+             style="display: inline-block; width: 240px; text-align: right">
+             &lambda; = <span id="l-value"> </span>
+    <input id="l" type="range"  min="0" max="360" step="0.5" />
+    <label for="p" 
+             style="display: inline-block; width: 240px; text-align: right">
+             &pi; = <span id="p-value"> </span>
+    <input id="p" type="range"  min="0" max="360" step="0.5" />
+    <label for="g" 
+             style="display: inline-block; width: 240px; text-align: right">
+             &gamma; = <span id="g-value"> </span>
+    <input id="g" type="range"  min="0" max="360" step="0.5" />
+    </div>
+    <div id="div2"></div>
+</div>
+    
+    
+<script>
+    main();
+	
+</script>	
+</body>
+</html>
